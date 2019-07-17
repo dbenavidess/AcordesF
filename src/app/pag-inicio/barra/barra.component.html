@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Acordes Facilitos</span>
+      <span class="example-spacer"></span>
+
+      <a [routerLink] = "['/about']">
+      <button mat-flat-button color="primary">About</button>
+      </a>
+
+
+      <a [routerLink] = "['/instruments']">
+          <button mat-icon-button color="" aria-label="Example icon-button with a heart icon">
+              <mat-icon> home</mat-icon>
+            </button>
+      </a>
+      
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>perm_identity</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>Login</span>
+        </button>
+        <a [routerLink] = "['/register']">
+          <button mat-menu-item>
+            <span>Sign Up</span>
+          </button>
+        </a>
+        <button mat-menu-item>
+          <span>Mis Cursos</span>
+        </button>
+        <button mat-menu-item>
+          <span>Logout</span>
+        </button>
+
+
+      </mat-menu>
+
+
+    
+    
+    
+    
+    
+    </mat-toolbar-row>
+  </mat-toolbar>

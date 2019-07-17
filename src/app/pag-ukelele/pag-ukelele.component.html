@@ -1,0 +1,11 @@
+<h1> Ukelele</h1>
+
+<mat-expansion-panel *ngFor="let lesson of lessons">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{lesson.nombre}}
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <span [innerHtml]=lesson.cuerpo ></span>   
+</mat-expansion-panel>
+<mat-divider></mat-divider>

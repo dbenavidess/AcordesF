@@ -1,0 +1,87 @@
+<div>
+  <form #UserForm = "ngForm" (ngSubmit)="onSubmit(UserForm)">
+    <mat-form-field>
+      <input 
+      matNativeControl required
+      matInput placeholder="Nombre" 
+      name="nombre"
+      #name= "ngModel" 
+      [(ngModel)]="db.SelectedUser.nombre">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input 
+      matNativeControl required
+      matInput placeholder="Apellidos"
+      name="apellidos"
+      #apellidos = "ngModel"
+      [(ngModel)]="db.SelectedUser.apellidos">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input 
+        matNativeControl required
+        Email matInput placeholder="Correo Electronico"
+        #Email = "ngModel"
+        name="email"
+        [(ngModel)]="db.SelectedUser.email">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Genero</mat-label>
+      <select 
+      matNativeControl required
+      name= "genero"
+      #genero="ngModel"
+      [(ngModel)]="db.SelectedUser.genero">
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Helicoptero apache RX224 con 8 misiles F-47">Helicoptero apache RX224 con misiles f47</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input 
+        matNativeControl required
+        matInput [matDatepicker]="picker" 
+        placeholder="Fecha de Nacimiento"
+        name= fechaN
+        #fechaN = "ngModel"
+        [(ngModel)]="db.SelectedUser.fechaN"
+        >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input
+      matNativeControl required
+      matInput placeholder="Usuario"
+      name = username
+      #username= "ngModel"
+      [(ngModel)]="db.SelectedUser.username">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input 
+        matNativeControl required
+        password type= "password" 
+        matInput placeholder="Contraseña">  
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input 
+        matNativeControl required
+        password type= "password" 
+        matInput placeholder="Repetir Contraseña"
+        name = contraseña
+        #password= "ngModel"
+        [(ngModel)]="db.SelectedUser.password">
+    </mat-form-field>
+    <br>
+    <input type="submit">
+
+  </form>
+</div>
+
